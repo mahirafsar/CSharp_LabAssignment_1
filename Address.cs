@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,9 +38,9 @@ namespace Lab_Assignment_1
             get { return this.country; }
         }
 
-        public void PrintAddress()
+        public string GetAddress()
         {
-            Console.WriteLine("Address: House NO-{0},Road No-{1},City-{2},Country-{3}", this.houseNo, this.roadNo, this.city,this.country);
+            return "House NO:"+this.houseNo+ ", Road NO:" + this.roadNo+", City Name:" +this.city+", Counrty Name:"+this.country;
         }
 
 
