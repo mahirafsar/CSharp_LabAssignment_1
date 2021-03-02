@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,33 +46,7 @@ namespace Lab_Assignment_1
                 myBank[i].ShowAccountInformation();
             }
         }
-        public void SearchAccount(int accountNumber)
-        {
-            int flag = 0;
-            for (int i = 0; i < myBank.Length; i++)
-            {
-                if (myBank[i] == null)
-                {
-                    continue;
-                }
-                else if (myBank[i].AccountNumber == accountNumber)
-                {
-                    myBank[i].ShowAccountInformation();
-                    flag = 0;
-                    break;
-                }
-                else
-                {
-                    flag = 1;
-                }
-
-            }
-            if (flag == 1)
-            {
-                Console.WriteLine("Account not found");
-            }
-        }
-
+     
         public void DeleteAccount(int accountNumber)
         {
             int flag = 0;
