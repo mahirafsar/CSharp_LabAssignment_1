@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,21 +6,26 @@ using System.Threading.Tasks;
 
 namespace Lab_Assignment_1
 {
+    
     class Account
     {
-        private  static int accountNumber=10001;
+        static int accountcount = 10001;
+        private int accountNumber;
         private string accountName;
         private double balance;
         private Address address;   //creating Association(HAS-A Relation)
 
-        static int AccNumber()
-        {
-            return accountNumber++;
-        }
+        //int AccNumber()
+        //{
+        //    accountNumber = accountcount;
+        //    accountcount++;
+        //    return accountNumber;
+        //}
 
         public Account(string accountName, double balance, Address address)
         {
-            //accountNumber = accountNumber;
+            accountNumber = accountcount;
+            accountcount++;
             this.accountName = accountName;
             this.balance = balance;
             this.address = address;
@@ -86,10 +91,17 @@ namespace Lab_Assignment_1
                 Console.WriteLine("Transfer fails");
             }
         }
+        //public void ShowAccountInformation()
+        //{
+        //    Console.WriteLine("Account No:{0}\nAccount Name:{1}\nAccount Balance:{2}", AccNumber(), this.accountName, this.balance);
+        //    //this.address.PrintAddress();
+        //    Console.WriteLine(this.address.GetAddress());
+        //}
         public void ShowAccountInformation()
         {
-            Console.WriteLine("Account No:{0}\nAccount Name:{1}\nAccount Balance:{2}",AccNumber(), this.accountName, this.balance);
-            this.address.PrintAddress();
+            Console.WriteLine("Account No:{0}\nAccount Name:{1}\nAccount Balance:{2}", this.AccountNumber, this.accountName, this.balance);
+            //this.address.PrintAddress();
+            Console.WriteLine(this.address.GetAddress());
         }
 
 
